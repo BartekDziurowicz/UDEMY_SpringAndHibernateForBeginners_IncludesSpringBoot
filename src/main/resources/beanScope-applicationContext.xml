@@ -9,7 +9,7 @@
 
     <bean id="myFortuneService" class="com.udemy.spring.HappyFortuneService"></bean>
 
-    <bean id="myCoach" class="com.udemy.spring.TrackCoach">
+    <bean id="myCoach" class="com.udemy.spring.TrackCoach" scope="prototype">
         <constructor-arg ref="myFortuneService" />
     </bean>
 
