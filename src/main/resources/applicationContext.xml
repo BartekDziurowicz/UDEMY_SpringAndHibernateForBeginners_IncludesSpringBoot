@@ -7,25 +7,7 @@
     http://www.springframework.org/schema/context
     http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <!-- load the properties file: sport.properties -->
-    <context:property-placeholder location="classpath:sport.properties"/>
-
-    <bean id="myFortuneService" class="com.udemy.spring.HappyFortuneService"></bean>
-
-    <bean id="myCoach" class="com.udemy.spring.TrackCoach">
-        <constructor-arg ref="myFortuneService" />
-    </bean>
-
-    <bean id="myCricketCoach" class="com.udemy.spring.CricketCoach">
-        <!-- set up setter injection -->
-        <property name="fortuneService" ref="myFortuneService" />
-        <!-- inject literal values hard coded
-        <property name="emailAddress" value="bartosz.udemy@gmail.com" />
-        <property name="team" value="Udemy Team" /> -->
-
-        <!-- inject literal values from file -->
-        <property name="emailAddress" value="${foo.email}" />
-        <property name="team" value="${foo.team}" />
-    </bean>
+    <!-- add entry to enable component scanning -->
+    <context:component-scan base-package="com.udemy.spring" />
 
 </beans>
