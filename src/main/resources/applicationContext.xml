@@ -14,7 +14,11 @@
     </bean>
 
     <bean id="myCricketCoach" class="com.udemy.spring.CricketCoach">
+        <!-- set up setter injection -->
         <property name="fortuneService" ref="myFortuneService" />
+        <!-- inject literal values -->
+        <property name="emailAddress" value="bartosz.udemy@gmail.com" />
+        <property name="team" value="Udemy Team" />
     </bean>
 
 </beans>
