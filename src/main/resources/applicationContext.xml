@@ -8,6 +8,7 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 
-    <bean id="myCoach" class="com.udemy.spring.TrackCoach"></bean>
+    <bean id="myCoach" class="com.udemy.spring.BaseballCoach"></bean>
+
 
 </beans>
