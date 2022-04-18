@@ -15,8 +15,8 @@ public class Student {
     private String country;
     @Setter(value = AccessLevel.NONE)
     private LinkedHashMap<String, String> countryOptions;
-
     private String favoriteLanguage;
+    private String[] operatingSystems;
 
     public Student() {
         countryOptions = new LinkedHashMap<>();
