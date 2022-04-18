@@ -1,5 +1,7 @@
 /home/bartek/Intellij_projects/UDEMY_SpringAndHibernateForBeginners_IncludesSpringBoot/src/main/java/com/udemy/spring/mvc/controller/HomeController.java
+/home/bartek/Intellij_projects/UDEMY_SpringAndHibernateForBeginners_IncludesSpringBoot/src/main/java/com/udemy/spring/mvc/controller/CustomerController.java
 /home/bartek/Intellij_projects/UDEMY_SpringAndHibernateForBeginners_IncludesSpringBoot/src/main/java/com/udemy/spring/mvc/controller/SillyController.java
+/home/bartek/Intellij_projects/UDEMY_SpringAndHibernateForBeginners_IncludesSpringBoot/src/main/java/com/udemy/spring/mvc/utils/Customer.java
 /home/bartek/Intellij_projects/UDEMY_SpringAndHibernateForBeginners_IncludesSpringBoot/src/main/java/com/udemy/spring/mvc/controller/HelloWorldController.java
 /home/bartek/Intellij_projects/UDEMY_SpringAndHibernateForBeginners_IncludesSpringBoot/src/main/java/com/udemy/spring/mvc/controller/StudentController.java
 /home/bartek/Intellij_projects/UDEMY_SpringAndHibernateForBeginners_IncludesSpringBoot/src/main/java/com/udemy/spring/mvc/utils/Student.java
