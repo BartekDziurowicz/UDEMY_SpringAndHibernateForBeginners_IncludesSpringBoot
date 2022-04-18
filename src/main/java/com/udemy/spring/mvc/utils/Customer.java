@@ -1,5 +1,6 @@
 package com.udemy.spring.mvc.utils;
 
+import com.udemy.spring.mvc.validation.CourseCode;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -19,4 +20,6 @@ public class Customer {
     private Integer freePasses;
     @Pattern(regexp="^[a-zA-Z0-9]{5}", message="only 5 chars/digits")
     private String postalCode;
+    @CourseCode
+    private String courseCode;
 }
