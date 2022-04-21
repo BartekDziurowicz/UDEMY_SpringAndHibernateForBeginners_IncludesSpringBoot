@@ -5,10 +5,9 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
-
+@ToString
 @Getter
 @Setter
-@ToString
 @Entity
 @Table(name="student")
 public class Student {
@@ -23,6 +22,9 @@ public class Student {
     private String lastName;
     @Column(name="email")
     private String email;
+
+    public Student() {
+    }
 
     public Student(String firstName, String lastName, String email) {
         this.firstName = firstName;
