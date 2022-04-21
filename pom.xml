@@ -14,9 +14,15 @@
         <lombok.version>1.18.22</lombok.version>
         <hibernate.version>6.0.0.Final</hibernate.version>
         <mysql-connector.version>8.0.28</mysql-connector.version>
+        <logback.version>1.2.10</logback.version>
     </properties>
 
     <dependencies>
+        <dependency>
+            <groupId>ch.qos.logback</groupId>
+            <artifactId>logback-classic</artifactId>
+            <version>${logback.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
