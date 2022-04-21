@@ -1,9 +1,6 @@
 package com.udemy.spring.hibernate.entity;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
@@ -17,6 +14,7 @@ import lombok.ToString;
 public class Student {
 
     @Id
+    @GeneratedValue(strategy=GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
     @Column(name="first_name")
