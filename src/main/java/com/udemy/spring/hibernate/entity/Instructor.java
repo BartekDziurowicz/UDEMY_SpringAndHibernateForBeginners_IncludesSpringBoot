@@ -1,11 +1,10 @@
 package com.udemy.spring.hibernate.entity;
 
-import com.sun.istack.NotNull;
 import jakarta.persistence.*;
 import lombok.*;
 
 @Entity
-@Table(name="Instructor")
+@Table(name="instructor")
 @NoArgsConstructor
 @RequiredArgsConstructor
 @Getter
@@ -19,15 +18,15 @@ public class Instructor {
     private int id;
 
     @Column(name="first_name")
-    @NotNull
+    @NonNull
     private String firstName;
 
     @Column(name="last_name")
-    @NotNull
+    @NonNull
     private String lastName;
 
     @Column(name="email")
-    @NotNull
+    @NonNull
     private String email;
 
     @OneToOne(cascade=CascadeType.ALL)

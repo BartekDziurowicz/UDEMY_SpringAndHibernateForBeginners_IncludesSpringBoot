@@ -1,6 +1,5 @@
 package com.udemy.spring.hibernate.entity;
 
-import com.sun.istack.NotNull;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -19,11 +18,11 @@ public class InstructorDetail {
     private int id;
 
     @Column(name="youtube_channel")
-    @NotNull
+    @NonNull
     private String youtubeChannel;
 
     @Column(name="hobby")
-    @NotNull
+    @NonNull
     private String hobby;
 
 }
