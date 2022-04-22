@@ -23,13 +23,13 @@ public class DeleteStudent {
             session.beginTransaction();
 
             // retreive student based on the id: primary key
-            Student student = session.get(Student.class, studentId);
+            //Student student = session.get(Student.class, studentId);
 
             // delete student
-            session.delete(student);
+            //session.delete(student);
 
             // second approach
-            session.createQuery("delete from Student where is=2").executeUpdate();
+            session.createQuery("delete from Student where id=2").executeUpdate();
 
             // commit transaction
             session.getTransaction().commit();
