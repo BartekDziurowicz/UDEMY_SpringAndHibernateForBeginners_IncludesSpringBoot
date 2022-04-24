@@ -1,14 +1,11 @@
 package com.udemy.spring.hibernate;
 
-import com.udemy.spring.hibernate.entity.Course;
-import com.udemy.spring.hibernate.entity.Instructor;
-import com.udemy.spring.hibernate.entity.InstructorDetail;
-import com.udemy.spring.hibernate.entity.Review;
+import com.udemy.spring.hibernate.entity.*;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
-public class CreateCoursesAndReviews {
+public class CreateCoursesAndStudents {
 
     public static void main(String[] args) {
 
@@ -18,6 +15,7 @@ public class CreateCoursesAndReviews {
                 .addAnnotatedClass(InstructorDetail.class)
                 .addAnnotatedClass(Course.class)
                 .addAnnotatedClass(Review.class)
+                .addAnnotatedClass(Student.class)
                 .buildSessionFactory();
 
         // create session
@@ -31,14 +29,20 @@ public class CreateCoursesAndReviews {
             // create a course
             Course tempCourse = new Course("Arkham Horror");
 
-            // add some reviews
-            tempCourse.addReview(new Review("Great course"));
-            tempCourse.addReview(new Review("Color from the Outer Space"));
-            tempCourse.addReview(new Review("Another dummy example"));
-
-            // save the course ... and leverage the cascade all
-            System.out.println("Saving the course: " + tempCourse + " | " + tempCourse.getReviews());
+            // save the course
             session.save(tempCourse);
+
+            // create students
+            Student tempStudent1 = new Student("John", "Doe", "john@mail.com");
+            Student tempStudent2 = new Student("Jane", "Doe", "jane@mail.com");
+
+            // add students to the course
+            tempCourse.addStudent(tempStudent1);
+            tempCourse.addStudent(tempStudent2);
+
+            // save students
+            session.save(tempStudent1);
+            session.save(tempStudent2);
 
             // commit transaction
             session.getTransaction().commit();
