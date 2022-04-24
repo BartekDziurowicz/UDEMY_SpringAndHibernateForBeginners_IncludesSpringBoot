@@ -32,9 +32,9 @@ public class CreateCoursesAndReviews {
             Course tempCourse = new Course("Arkham Horror");
 
             // add some reviews
-            tempCourse.add(new Review("Great course"));
-            tempCourse.add(new Review("Color from the Outer Space"));
-            tempCourse.add(new Review("Another dummy example"));
+            tempCourse.addReview(new Review("Great course"));
+            tempCourse.addReview(new Review("Color from the Outer Space"));
+            tempCourse.addReview(new Review("Another dummy example"));
 
             // save the course ... and leverage the cascade all
             System.out.println("Saving the course: " + tempCourse + " | " + tempCourse.getReviews());
