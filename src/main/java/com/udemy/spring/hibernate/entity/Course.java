@@ -39,6 +39,7 @@ public class Course {
             joinColumns=@JoinColumn(name="course_id"),
             inverseJoinColumns=@JoinColumn(name="student_id")
     )
+    @ToString.Exclude
     private List<Student> students;
 
     public void addReview(Review tempReview) {
