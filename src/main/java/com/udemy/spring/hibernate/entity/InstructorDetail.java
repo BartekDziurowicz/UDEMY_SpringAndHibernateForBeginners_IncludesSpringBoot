@@ -25,4 +25,7 @@ public class InstructorDetail {
     @NonNull
     private String hobby;
 
+    @OneToOne(mappedBy="instructorDetail", cascade=CascadeType.ALL)
+    private Instructor instructor;
+
 }
