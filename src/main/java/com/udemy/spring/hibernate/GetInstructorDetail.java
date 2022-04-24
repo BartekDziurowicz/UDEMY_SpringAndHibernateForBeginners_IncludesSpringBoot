@@ -36,7 +36,12 @@ public class GetInstructorDetail {
             // commit transaction
             session.getTransaction().commit();
 
+        } catch (Exception exc) {
+            exc.printStackTrace();
         } finally {
+            // handle conenction leak issue
+            session.close();
+
             factory.close();
         }
 
