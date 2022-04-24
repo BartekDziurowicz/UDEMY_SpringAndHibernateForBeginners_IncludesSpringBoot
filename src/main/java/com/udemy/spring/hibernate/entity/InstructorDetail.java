@@ -26,6 +26,7 @@ public class InstructorDetail {
     private String hobby;
 
     @OneToOne(mappedBy="instructorDetail", cascade=CascadeType.ALL)
+    @ToString.Exclude
     private Instructor instructor;
 
 }
